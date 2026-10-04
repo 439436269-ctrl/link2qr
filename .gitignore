@@ -1,0 +1,3 @@
+﻿# never commit extension signing keys or packaged binaries
+*.pem
+*.crx
