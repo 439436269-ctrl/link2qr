@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Link2QR · 链接转二维码</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="card">
+    <header class="head">
+      <div class="brand">
+        <span class="logo" aria-hidden="true"></span>
+        <span class="name">Link2QR</span>
+        <span class="sub">链接转二维码</span>
+      </div>
+      <span class="chip" id="sourceChip">当前页面</span>
+    </header>
+
+    <section class="stage" id="stage">
+      <canvas id="qrCanvas" width="240" height="240" aria-label="二维码"></canvas>
+      <div class="empty" id="emptyHint" hidden>输入内容后自动生成</div>
+    </section>
+
+    <p class="caption" id="caption" title=""></p>
+
+    <input id="textInput" class="input" type="text" spellcheck="false"
+           placeholder="粘贴链接，或输入任意文本" autocomplete="off">
+
+    <div class="controls">
+      <label class="swatch" title="二维码颜色">
+        <input type="color" id="fgColor" value="#18181b">
+        <span>颜色</span>
+      </label>
+      <label class="swatch" title="背景颜色">
+        <input type="color" id="bgColor" value="#ffffff">
+        <span>底色</span>
+      </label>
+      <label class="size">
+        <span>导出</span>
+        <select id="sizeSel">
+          <option value="256">256px</option>
+          <option value="512" selected>512px</option>
+          <option value="1024">1024px</option>
+          <option value="2048">2048px</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="actions">
+      <button class="btn primary" id="btnDownload" type="button">下载 PNG</button>
+      <button class="btn" id="btnCopyImg" type="button">复制图片</button>
+      <button class="btn" id="btnCopyText" type="button">复制内容</button>
+    </div>
+  </main>
+
+  <script src="lib/qrcode.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
