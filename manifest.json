@@ -1,25 +1,26 @@
-﻿{
-  "manifest_version": 3,
-  "name": "Link2QR · 链接转二维码",
-  "version": "1.0.2",
-  "description": "一键把当前网页链接或任意文本生成二维码（类似草料）：下载 PNG、复制图片/链接、右键菜单生成，可调颜色与尺寸。",
-  "permissions": ["activeTab", "contextMenus", "storage", "clipboardWrite"],
-  "action": {
-    "default_popup": "popup.html",
-    "default_title": "生成二维码",
-    "default_icon": {
+{
+   "action": {
+      "default_icon": {
+         "128": "icons/icon128.png",
+         "16": "icons/icon16.png",
+         "48": "icons/icon48.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "生成二维码"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "description": "一键把当前网页链接或任意文本生成二维码（类似草料）：下载 PNG、复制图片/链接、右键菜单生成，可调颜色与尺寸。",
+   "icons": {
+      "128": "icons/icon128.png",
       "16": "icons/icon16.png",
-      "48": "icons/icon48.png",
-      "128": "icons/icon128.png"
-    }
-  },
-  "background": {
-    "service_worker": "background.js"
-  },
-  "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
-  },
-  "update_url": "https://clients2.google.com/service/update2/crx"
+      "48": "icons/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmUwv7oLiWlKO5FjfKBoV6KgW9KPqGWtca0jpgg1l+yCARJE8Z20I++DsRGFaa9Pc8B0BWNcQ0jVkGn+b/xVZPEsuhIfsePnMKAp8jUXpUnD/eXqM7D6vTLfkExLWyKaFUItbkadnTbp9+Fst9N26su7QcWXpp3go2Th5whzL7AgAoL8nr/luj1ZPaUIPiTFG3z1JUuRcCExq/9C0wFNYqK+3b7RjEilOVtWtH/o/puS3TsWsbbiX8JvdFcSgfUbAt9/AK7z1/JxoiWxYvuI89WU5AllEvBbM6SH3DcFn30wUEXfWh1cj0+yKuI2kPRvSTryMQqnU1k/jR+YwzM2ifQIDAQAB",
+   "manifest_version": 3,
+   "name": "Link2QR · 链接转二维码",
+   "permissions": [ "activeTab", "contextMenus", "storage", "clipboardWrite" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.3"
 }
